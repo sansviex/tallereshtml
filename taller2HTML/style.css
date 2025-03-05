@@ -1,0 +1,161 @@
+/* style.css */
+
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-text-color: #333;
+    --header-bg-color: #2c3e50;
+    --header-text-color: white;
+    --highlight-bg-color: #e0e0e0;
+    --button-bg-color: #3498db;
+    --button-hover-bg-color: #2980b9;
+    --footer-bg-color: #34495e;
+    --list-bullet-color: #3498db;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--list-bullet-color);
+}
+
+.highlight {
+    background-color: var(--highlight-bg-color);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: var(--header-bg-color);
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.contact-section button {
+    background-color: var(--button-bg-color);
+    color: var(--header-text-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Flexbox for Skills Section */
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-box {
+    background-color: #ddd;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+
+    .skills-container {
+        justify-content: flex-start;
+    }
+}
